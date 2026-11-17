@@ -3,7 +3,7 @@ import httpx
 from datetime import datetime
 
 
-def fetch_current_wheather():
+def fetch_current_weather():
     url = KRK_URL
 
     params = {
@@ -21,9 +21,5 @@ def fetch_current_wheather():
     temperature = data["current"]["temperature_2m"]
     humidity = data["current"]["relative_humidity_2m"]
     result = {"time": time, "temperature": temperature, "humidity": humidity}
-    print(data)
-    print(result)
+
     return result
-
-
-fetch_current_wheather()
