@@ -3,7 +3,7 @@ import httpx
 from datetime import datetime
 
 
-def fetch_current_weather():
+def fetch_current_weather() -> dict:
     url = KRK_URL
 
     params = {
